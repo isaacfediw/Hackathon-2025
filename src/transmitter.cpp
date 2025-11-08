@@ -2,15 +2,18 @@
 #include <esp_now.h>
 #include <WiFi.h>
 
-bool bool_value = true;
+#define BUTTON_PIN GPIO_NUM_26
 
-uint8_t recieverAddress[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+bool bool_value;
+uint8_t recieverAddress[] = {0x1C, 0X69, 0X20, 0XA4, 0X9C, 0X70};
 
 esp_now_peer_info_t peerInfo;
 
 void setup() {
     Serial.begin(115200);
     WiFi.mode(WIFI_STA);
+
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
 
     if (esp_now_init() != ESP_OK) {
         Serial.println("Error initializing ESP-NOW");
@@ -33,7 +36,7 @@ void setup() {
 }
 
 void loop() {
-    bool_value = !bool_value;
+    bool_value = digitalRead(BUTTON_PIN) == LOW ? true : false;
     esp_err_t result = esp_now_send(recieverAddress, (uint8_t *) &bool_value, sizeof(bool));
 
     if (result == ESP_OK) {
@@ -42,5 +45,4 @@ void loop() {
     } else {
         Serial.println("Error sending the data");
     }
-    delay(1000);
 }
