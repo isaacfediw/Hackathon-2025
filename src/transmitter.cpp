@@ -5,7 +5,7 @@
 #define BUTTON_PIN GPIO_NUM_26
 
 bool bool_value;
-uint8_t recieverAddress[] = {0x1C, 0X69, 0X20, 0XA4, 0X9C, 0X70};
+uint8_t recieverAddress[] = {0xAC, 0x0B, 0xFB, 0xD0, 0x65, 0xD6};
 
 esp_now_peer_info_t peerInfo;
 
