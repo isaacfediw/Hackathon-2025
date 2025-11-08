@@ -10,7 +10,8 @@ This protocol does not require the ESPs to connect to a network, so it's perfect
 
 ## How to use it
 To use:
-- Plug in the 
-- Press the button
+- Plug the black power supply into the wall
+- Plug the USB-A into a USB-A receptacle (I recommend a computer port for ease)
+- Press the button and hold it for at least 1 second
 
-It's that simple! The code is precompiled onto the ESPs and does not need to be run again, although it can be.
+It's that simple! The code is precompiled onto the ESPs and does not need to be run again.
