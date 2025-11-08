@@ -8,7 +8,7 @@ This project allows you to reset your wifi with the press of a button.
 It uses two ESP32s which communicate with each other using the "espnow" protocol.
 This protocol does not require the ESPs to connect to a network, so it's perfect for this application.
 
-# How to use it
+## How to use it
 To use:
 - Press the button
 
