@@ -1,12 +1,10 @@
 #include <Arduino.h>
-#include <ESP8266WiFi.h>
-extern "C" {
-#include <espnow.h>
-}
+#include <WiFi.h>
+#include <esp_now.h>
 
-#define MOSFET_PIN D1  // adjust if your MOSFET is wired to another GPIO
+#define MOSFET_PIN GPIO_NUM_26
 
-void onDataRecv(uint8_t *mac, uint8_t *incomingData, uint8_t len) {
+void onDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
     if (len < sizeof(bool)) {
         Serial.println("Received payload too small");
         return;
@@ -17,6 +15,8 @@ void onDataRecv(uint8_t *mac, uint8_t *incomingData, uint8_t len) {
     Serial.println(state);
 
     digitalWrite(MOSFET_PIN, state ? HIGH : LOW);
+
+    if (state) delay(2000);
 }
 
 void setup() {
@@ -28,12 +28,11 @@ void setup() {
     pinMode(MOSFET_PIN, OUTPUT);
     digitalWrite(MOSFET_PIN, LOW);
 
-    if (esp_now_init() != 0) {
+    if (esp_now_init() != ESP_OK) {
         Serial.println("Error initializing ESP-NOW");
         return;
     }
 
-    esp_now_set_self_role(ESP_NOW_ROLE_SLAVE);
     esp_now_register_recv_cb(onDataRecv);
 }
 
