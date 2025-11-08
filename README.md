@@ -19,4 +19,5 @@ It's that simple! The code is precompiled onto the ESPs and does not need to be 
 ## Expected Outcome
 After the button is pressed for a moment, the router will turn off (indicated by the blue leds).  
 In a short moment the router will turn back on (indicated by the blue leds).  
+This resets the router and would fix it!
 
