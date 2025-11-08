@@ -2,7 +2,7 @@
 ## Our Project Idea
 Often, I have been up in my room when my wifi bugs out and stops working.
 The only way to fix it? Going all the way downstairs and resetting it.
-This project allows you to reset your wifi with the press of a button.
+This project allows you to *wirelessly* reset your wifi with the press of a button.
 
 ## How it Works
 It uses two ESP32s which communicate with each other using the "espnow" protocol.
