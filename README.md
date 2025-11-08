@@ -10,6 +10,7 @@ This protocol does not require the ESPs to connect to a network, so it's perfect
 
 ## How to use it
 To use:
+- Plug in the 
 - Press the button
 
 It's that simple! The code is precompiled onto the ESPs and does not need to be run again, although it can be.
