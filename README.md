@@ -2,17 +2,19 @@
 ## Our Project Idea
 Often, I have been up in my room when my wifi bugs out and stops working.  
 The only way to fix it? Going all the way downstairs and resetting it.  
-This project allows you to *wirelessly* reset your wifi with the press of a button.
+This project allows you to *wirelessly* reset your wifi with the press of a button!  
+This project can also be expanded for other applications, such as wireless control of an outlet for example.  
 
 ## How it Works
 It uses two ESP32s which communicate with each other using the "espnow" protocol.  
 This protocol does not require the ESPs to connect to a network, so it's perfect for this application.
+In contrast to something like "Apple Smart Home" this works any time, wifi or not!  
 
 ## How to use it
 To use:
 - Plug the black power supply into the wall
 - Plug the USB-A into a USB-A receptacle (I recommend a computer port for ease)
-- Press the button and hold it for at least 1 second
+- Firmly press the button  
 
 It's that simple! The code is precompiled onto the ESPs and does not need to be run again.  
 
