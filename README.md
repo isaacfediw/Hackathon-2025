@@ -7,7 +7,7 @@ This project can also be expanded for other applications, such as wireless contr
 
 ## How it Works
 It uses two ESP32s which communicate with each other using the "espnow" protocol.  
-This protocol does not require the ESPs to connect to a network, so it's perfect for this application.
+This protocol does not require the ESPs to connect to a network, so it's perfect for this application.  
 In contrast to something like "Apple Smart Home" this works any time, wifi or not!  
 
 ## How to use it
