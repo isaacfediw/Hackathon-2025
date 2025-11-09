@@ -5,7 +5,7 @@
 #define BUTTON_PIN D4
 
 bool bool_value;
-uint8_t recieverAddress[] = {0xEC, 0XE3, 0X34, 0X79, 0X7D, 0X7C};
+uint8_t recieverAddress[] = {0x8C, 0x4F, 0x00, 0x2F, 0x6F, 0xE0};
 
 void onDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
     Serial.print("Last Packet Send Status: ");
