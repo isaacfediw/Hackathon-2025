@@ -1,4 +1,9 @@
 # HTTP Hacks - 2025 [Electro Hackers]
+## Our Team
+We are the Electro Hackers.  
+Our team consists of 2 members, Isaac and Ilia.  
+We are both in our 3rd year of the BCIT Electrical Engineering Bachelor's Program.  
+
 ## Our Project Idea
 Often, I have been up in my room when my wifi bugs out and stops working.  
 The only way to fix it? Going all the way downstairs and resetting it.  
