@@ -16,7 +16,7 @@ To use:
 - Plug the USB-A into a USB-A receptacle (I recommend a computer port for ease)
 - Firmly press the button  
 
-It's that simple! The code is precompiled onto the ESPs and does not need to be run again.  
+It's that simple! The code is precompiled onto the ESPs and does not need to be run to use the project.  
 
 ## Expected Outcome
 After the button is pressed for a moment, the router will turn off (indicated by the blue leds).  
