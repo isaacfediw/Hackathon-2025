@@ -15,8 +15,6 @@ void onDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
     Serial.println(state);
 
     digitalWrite(MOSFET_PIN, state ? HIGH : LOW);
-
-    if (state) delay(2000);
 }
 
 void setup() {
